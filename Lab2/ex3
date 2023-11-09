@@ -1,0 +1,46 @@
+// Change the guessing game so that the user can specify the range between which the number to be guessed is.
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+int main() {
+    int userMin, userMax;
+    int userNumber;
+    int myNumber;
+
+    std::cout << "Playing number game! Enter 0 to quit." << std::endl;
+
+    
+    std::cout << "Enter the minimum number: ";
+    std::cin >> userMin;
+
+    std::cout << "Enter the maximum number: ";
+    std::cin >> userMax;
+
+   
+    std::srand(std::time(0));
+
+    while (true) {
+        // Generating a random number within the specified range
+        myNumber = std::rand() % (userMax - userMin + 1) + userMin;
+
+        std::cout << "Give a number (enter 0 to quit): ";
+        std::cin >> userNumber;
+
+        if (userNumber == 0) {
+            std::cout << "Game Over!" << std::endl;
+            break; // Exit the loop if the user enters 0
+        }
+
+        if (userNumber == myNumber) {
+            std::cout << "Congratulations! You guessed it!" << std::endl;
+            break; // Exit the loop if the user guesses the correct number
+        } else {
+            std::cout << "Wrong guess! My number is " << myNumber << "." << std::endl;
+        }
+    }
+
+    return 0;
+}
+
