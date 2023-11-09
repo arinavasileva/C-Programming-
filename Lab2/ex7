@@ -1,0 +1,20 @@
+// Write a program with an integer-type variable x, and a pointer-type variable y that points to x. Then print to the screen:
+// 1. address of both variables in memory
+// 2. the value of both variables
+// If necessary, find additional information to print the output.
+
+
+#include <iostream>
+
+int main() {
+    int x = 39; // 
+    int* y = &x; // Pointer y points to the address of x
+
+    std::cout << "Address of x: " << &x << std::endl;
+    std::cout << "Address of y: " << &y << std::endl;
+
+    std::cout << "Value of x: " << x << std::endl;
+    std::cout << "Value pointed to by y: " << *y << std::endl;
+
+    return 0;
+}
