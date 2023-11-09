@@ -1,0 +1,27 @@
+//Write a Bohemic Number Game as follows: Playing number game!
+//Give a number: 12
+//I won, mine is 13!
+//Give a number: 999
+//I won, mine is 1000!
+//Give a number:
+//(etc., the game continues infinitely)
+
+#include <iostream>
+
+int main() {
+    int userNumber;
+    int myNumber = 0;
+
+    std::cout << "Playing number game!" << std::endl;
+
+    while (true) {
+        std::cout << "Give a number: ";
+        std::cin >> userNumber;
+
+        myNumber = userNumber + 1;
+
+        std::cout << "I won, mine is " << myNumber << "!" << std::endl;
+    }
+
+    return 0;
+}
