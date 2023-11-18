@@ -1,3 +1,4 @@
+//TASK 1, 2, 5, 7 (total 4 KPL)
 // Write a program with an integer-type variable x, and a pointer-type variable y that points to x. Then print to the screen:
 // 1. address of both variables in memory
 // 2. the value of both variables
