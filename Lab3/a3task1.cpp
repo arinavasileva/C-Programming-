@@ -1,4 +1,4 @@
-//TASK 1, 2, 5, 7 (total 4 KPL)
+//TASK 1, 2, 3, 4 (total 4 KPL)
 // Task 1
 // Write a function
 // int *allocate_table(int n);
