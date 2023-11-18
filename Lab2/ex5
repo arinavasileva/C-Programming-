@@ -1,3 +1,4 @@
+//TASK 1, 2, 5, 7 (total 4 KPL)
 // Change the guessing game so that the user can specify the range between which the number to be guessed is.
 
 #include <iostream>
