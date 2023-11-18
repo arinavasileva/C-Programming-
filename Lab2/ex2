@@ -1,3 +1,4 @@
+//TASK 1, 2, 5, 7 (total 4 KPL)
 //Modify the game so that the game will end when the user gives a zero.
 
 #include <iostream>
