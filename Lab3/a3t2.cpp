@@ -1,5 +1,5 @@
 /******************************************************************************
-TASK 1, 2, 5, 7 (total 4 KPL)
+TASK 1, 2, 3, 4 (total 4 KPL)
 Write a function
 void read_values(int *t, int n);
 which reads to the array given as a parameter integers from the keyboard
