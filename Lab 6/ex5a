@@ -1,0 +1,8 @@
+void main() {
+          String s;
+          char name[30];
+          s = "Matti";     //Conversion c-string -> String
+          cout << s;
+          strcpy(name, s); //Conversion String -> c-string
+          cout << name;
+}
