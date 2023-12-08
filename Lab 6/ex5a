@@ -6,17 +6,17 @@ private:
     char* str;
 
 public:
-    // Conversion constructor from c-style string to String object
+    // Constructor conversion 
     String(const char* cstr) {
-        // Implement your constructor logic here
+        
     }
 
-    // Type conversion operator from String to c-style string
+    
     operator const char*() const {
-        // Implement your conversion logic here
+        
     }
 
-    // Other necessary member functions and destructor...
+   
 
 };
 
