@@ -3,33 +3,67 @@
 
 class String {
 private:
-    char* str;
+    char* data;
 
 public:
-    // Constructor conversion 
-    String(const char* cstr) {
-        
+    // Conversion constructor from C-style string to String object
+    String(const char* str = "") {
+        data = new char[strlen(str) + 1];
+        strcpy(data, str);
     }
 
-    
+    // constructor
+    String(const String& other) {
+        data = new char[strlen(other.data) + 1];
+        strcpy(data, other.data);
+    }
+
+    // Destructor
+    ~String() {
+        delete[] data;
+    }
+
+    // assignment operator
+    String& operator=(const String& other) {
+        if (this != &other) {
+            delete[] data;
+            data = new char[strlen(other.data) + 1];
+            strcpy(data, other.data);
+        }
+        return *this;
+    }
+
+    // Concatenation operator
+    String operator+(const String& other) const {
+        String result;
+        result.data = new char[strlen(data) + strlen(other.data) + 1];
+        strcpy(result.data, data);
+        strcat(result.data, other.data);
+        return result;
+    }
+
+    // converting String object to C-style string
     operator const char*() const {
-        
+        return data;
     }
 
-   
-
+    // Friend function for stream insertion
+    friend std::ostream& operator<<(std::ostream& os, const String& str) {
+        os << str.data;
+        return os;
+    }
 };
 
 int main() {
     String s;
     char name[30];
 
-    // Conversion c-string -> String
+    // C-style string -> String using the conversion constructor
     s = "Matti";
     std::cout << s;
 
-    // Conversion String -> c-string
-    strcpy(name, s);
+    // Conversion String -> C-style string using the type conversion operator
+    strcpy(name, static_cast<const char*>(s));
     std::cout << name;
 
     return 0;
