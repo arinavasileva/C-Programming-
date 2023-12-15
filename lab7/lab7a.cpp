@@ -1,5 +1,4 @@
 #include <iostream>
-#include "counter.cpp"
 using namespace std;
 
 
