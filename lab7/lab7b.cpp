@@ -51,6 +51,7 @@ ostream &operator<<(ostream &out, const Counter &c) {
 }
 
 // Class definition for LimitedCounter (inherits from Counter)
+
 class LimitedCounter : public Counter {
 public:
     LimitedCounter(int initialValue, int upperLimit);
