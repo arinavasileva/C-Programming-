@@ -3,9 +3,11 @@ using namespace std;
 
 
 // forwarding to Counter class
+
 class Counter;
 
 // definition for LimitedCounter
+
 class LimitedCounter {
 public:
     LimitedCounter(int initialValue, int upperLimit);
@@ -29,6 +31,7 @@ private:
 };
 
 // Counter class definition (same as in the original code)
+
 class Counter {
     friend ostream& operator<<(ostream& out, const Counter& c);
 
@@ -45,12 +48,14 @@ private:
 };
 
 // Overload for Counter
+
 ostream& operator<<(ostream& out, const Counter& c) {
     out << "\nCounter value is now " << c.count;
     return out;
 }
 
 // Overload for LimitedCounter
+
 ostream& operator<<(ostream& out, const LimitedCounter& lc) {
     out << *lc.counter; // Use the existing operator<< for Counter
     return out;
@@ -148,6 +153,7 @@ void LimitedCounter::setLimit(int upperLimit) {
 }
 
 // Program test
+
 int main() {
     LimitedCounter lc(0, 5);
     cout << lc++ << endl;
