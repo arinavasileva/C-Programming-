@@ -2,6 +2,7 @@
 using namespace std;
 
 // Class definition for Counter
+
 class Counter {
     friend ostream &operator<<(ostream &out, const Counter &c);
 
@@ -18,6 +19,7 @@ private:
 };
 
 // Counter class implementation (same as in the original code)
+
 Counter::Counter(int n0) {
     count = n0;
 }
@@ -93,6 +95,7 @@ void LimitedCounter::setLimit(int upperLimit) {
 }
 
 // Program testing
+
 int main() {
     LimitedCounter lc(3, 5);
     cout << lc++ << endl;
